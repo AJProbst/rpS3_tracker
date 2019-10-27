@@ -101,7 +101,7 @@ rm all_rpS3_scaffold.ids
 # extract scaffolds of clusters
 cd rpS3_clusters
 ls -1 rpS3_* > all_genes.txt
-split all_genes.txt -l 6 batch.
+split all_genes.txt -l 6 batch. -d -a 5
 for batch in $(ls -1 batch.*); do
   for cluster in $(cat $batch); do
     extr_cluster
